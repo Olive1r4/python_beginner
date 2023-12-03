@@ -1,4 +1,4 @@
-# Programa 5.19 - Contagem de Cédulas
+# Programa 5.19 & 5.20- Contagem de Cédulas
 while True:
     valor = float(input("Digite o Valor a pagar: "))
     if valor >= 0.01:
