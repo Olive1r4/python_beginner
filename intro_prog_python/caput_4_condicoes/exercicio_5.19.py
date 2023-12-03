@@ -38,3 +38,26 @@ while True:
         elif atual == 0.02:
             atual = 0.01
         cedulas = 0
+
+
+""" OUTRA FORMA DE RESOLVER
+
+valor = float(input("Digite o Valor a pagar: "))
+print(valor)
+
+cedulas = 0
+atual = 100
+print(atual)
+apagar = valor
+
+while True:
+    if atual <= apagar:
+        apagar -= atual
+        cedulas += 1
+    else:
+        print(f"{cedulas} Cédula(s) de R${atual}")
+        if apagar == 0:
+            break
+        atual = int(atual / 2)
+        cedulas = 0
+"""
