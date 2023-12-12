@@ -1,17 +1,14 @@
 def main():
-
-    num1 = int(input("Informe o primeiro numero inteiro: "))
-    num2 = int(input("Informe o segundo numero inteiro: "))
-
-    num3 = 0
-    soma = 0
+    numerador = int(input("Informe o numerador: "))
+    denominador = int(input("Informe o denominador: "))
 
     while True:
-        if (num2 + num2) < num1:
-            soma += num2
+        if (numerador - denominador) >= 0:
+            numerador = numerador - denominador
         else:
-            num3 = num1 - soma
-            print(f"Restor: {num3}")
+            print(f"Resto: {numerador}")
             break
-if __name__=='__main__':
+
+
+if __name__ == '__main__':
     main()
