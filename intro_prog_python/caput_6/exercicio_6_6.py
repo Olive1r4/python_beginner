@@ -2,6 +2,8 @@
 
 def main():
 
+    operacao = []
+
     ultimo1 = 10
     ultimo2 = 10
     #Cria uma lista de 1 a 10
@@ -17,33 +19,35 @@ def main():
         print("Digite F para adicionar um cliente ao final da fila,")
         print("A para realizar o atendimeto na fila 1.")
         print("B para realizar o atendimeto na fila 2. S para sair.")
-        operacao = input("Operação (FA, FB, S, A, B): ").upper()
+        op = input("Operação (FA, FB, S, A, B): ").upper()
 
+        operacao.append([op])
+        print(operacao[0])
         x = 0
         while True:
-            if operacao[x] == "A":
+            if operacao[x] == ["A"]:
                 if len(fila1) > 0:
                     atendido = fila1.pop(0)
                     print(f"Cliente {atendido} atendido")
                 else:
                     print("Fila vazia! Ninguém para atender.")
                 x += 1
-            elif operacao[x] == "B":
+            elif operacao[x] == ["B"]:
                 if len(fila2) > 0:
                     atendido = fila2.pop(0)
                     print(f"Cliente {atendido} atendido")
                 else:
                     print("Fila vazia! Ninguém para atender.")
                 x += 1
-            elif operacao[x] == "FA":
+            elif operacao[x] == ["FA"]:
                 ultimo1 += 1 # Incrementa o ticket do novo cliente
                 fila1.append(ultimo1)
                 x += 1
-            elif operacao[x] == "FB":
+            elif operacao[x] == ["FB"]:
                 ultimo2 += 1 # Incrementa o ticket do novo cliente
                 fila1.append(ultimo2)
                 x += 1
-            elif operacao[x] == "S":
+            elif operacao[x] == ["S"]:
                 exit()
             else:
                 print(f"A operação {operacao[x]} é inválida! Digite apenas FA, FB, S, A, B")
